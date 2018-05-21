@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 398
-  Top = 575
-  Width = 848
+  Left = 905
+  Top = 405
+  Width = 792
   Height = 469
   Caption = 'PingPong by Monika'
   Color = clBtnFace
@@ -13,17 +13,19 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyUp = FormKeyUp
   DesignSize = (
-    832
+    776
     430)
   PixelsPerInch = 96
   TextHeight = 13
   object tlo: TShape
     Left = 0
     Top = 0
-    Width = 832
+    Width = 776
     Height = 430
     Align = alClient
     Brush.Color = clGreen
@@ -59,10 +61,10 @@ object Form1: TForm1
     Shape = stCircle
   end
   object Label2: TLabel
-    Left = 296
+    Left = 295
     Top = 192
-    Width = 217
-    Height = 35
+    Width = 113
+    Height = 27
     Anchors = [akLeft, akTop, akBottom]
     Caption = 'Ilosc odbic:'
     Font.Charset = EASTEUROPE_CHARSET
@@ -74,9 +76,9 @@ object Form1: TForm1
     Visible = False
   end
   object Label1: TLabel
-    Left = 296
-    Top = 128
-    Width = 193
+    Left = 295
+    Top = 136
+    Width = 98
     Height = 33
     Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = 'Wynik: '
@@ -93,7 +95,7 @@ object Form1: TForm1
   object points: TLabel
     Left = 208
     Top = 40
-    Width = 385
+    Width = 362
     Height = 42
     Caption = 'Punkt dla gracza prawego -->'
     Font.Charset = ANSI_CHARSET
@@ -104,6 +106,21 @@ object Form1: TForm1
     ParentFont = False
     Visible = False
   end
+  object Label3: TLabel
+    Left = 208
+    Top = 88
+    Width = 363
+    Height = 37
+    Caption = 'Zagrajmy w PingPonga!'
+    Color = clLime
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -32
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
   object Button1: TButton
     Left = 256
     Top = 320
@@ -111,6 +128,7 @@ object Form1: TForm1
     Height = 60
     Cursor = crHandPoint
     Caption = 'Nowa gra'
+    DragCursor = crHandPoint
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -31
@@ -126,6 +144,7 @@ object Form1: TForm1
     Width = 300
     Height = 60
     Caption = 'Nast'#281'pna rudna'
+    DragCursor = crHandPoint
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clLime
     Font.Height = -23
@@ -134,6 +153,22 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 1
     Visible = False
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 40
+    Top = 352
+    Width = 97
+    Height = 41
+    Caption = 'Opcje'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    OnClick = Button3Click
   end
   object TimerLeftPaddleTop: TTimer
     Enabled = False
